@@ -9,10 +9,11 @@ import Curve from '../shape/Curve';
 import Dot from '../shape/Dot';
 import Layer from '../container/Layer';
 import Text from '../component/Text';
+import LabelList from '../component/LabelList';
 import pureRender from '../util/PureRender';
 import { PRESENTATION_ATTRIBUTES, EVENT_ATTRIBUTES,
   getPresentationAttributes, isSsr } from '../util/ReactUtils';
-import { isNumber } from '../util/DataUtils';
+import { isNumber, uniqueId } from '../util/DataUtils';
 
 @pureRender
 class Area extends Component {
@@ -99,7 +100,7 @@ class Area extends Component {
 
   state = { isAnimationFinished: true };
 
-  id = _.uniqueId('recharts-area-');
+  id = uniqueId('recharts-area-');
 
   handleAnimationEnd = () => {
     this.setState({ isAnimationFinished: true });
@@ -309,10 +310,12 @@ class Area extends Component {
   }
 
   render() {
-    const { dot, label, points, className, top, left, xAxis, yAxis, width, height } = this.props;
+    const { dot, label, points, className, top, left, xAxis, yAxis, width,
+      height, isAnimationActive } = this.props;
 
     if (!points || !points.length) { return null; }
 
+    const { isAnimationFinished } = this.state;
     const hasSinglePoint = points.length === 1;
     const layerClass = classNames('recharts-area', className);
     const needClip = (xAxis && xAxis.allowDataOverflow) || (yAxis && yAxis.allowDataOverflow);
@@ -340,6 +343,8 @@ class Area extends Component {
         }
         {(dot || hasSinglePoint) && this.renderDots()}
         {label && this.renderLabels()}
+        {(!isAnimationActive || isAnimationFinished) &&
+          LabelList.renderCallByParent(this.props, points)}
       </Layer>
     );
   }
