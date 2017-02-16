@@ -121,6 +121,9 @@ class Legend extends Component {
       ...wrapperStyle,
     };
 
+    // outerStyle.right = '-45px';
+    // outerStyle.top = '50%';
+
     return (
       <div
         className={`recharts-legend-wrapper recharts-legend-wrapper-align-${this.props.align} recharts-legend-wrapper-vertical-align-${this.props.verticalAlign}`}
