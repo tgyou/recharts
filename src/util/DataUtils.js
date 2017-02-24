@@ -13,9 +13,11 @@ export const isNumOrStr = value => (
   isNumber(value) || _.isString(value)
 );
 
-let idCounter = 0;
+export const stored = {
+  idCounter: 0
+} 
 export const uniqueId = (prefix) => {
-  const id = ++idCounter;
+  const id = ++stored.idCounter;
 
   return `${prefix || ''}${id}`;
 };
