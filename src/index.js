@@ -1,30 +1,30 @@
-import './polyfill';
+// import './polyfill';
 
 export Surface from './container/Surface';
 export Layer from './container/Layer';
 
 export Legend from './component/Legend';
 export Tooltip from './component/Tooltip';
-export ResponsiveContainer from './component/ResponsiveContainer';
+// export ResponsiveContainer from './component/ResponsiveContainer';
 export Cell from './component/Cell';
 export Text from './component/Text';
 export Label from './component/Label';
-export LabelList from './component/LabelList';
+// export LabelList from './component/LabelList';
 
-export Sector from './shape/Sector';
-export Curve from './shape/Curve';
-export Rectangle from './shape/Rectangle';
-export Polygon from './shape/Polygon';
-export Dot from './shape/Dot';
-export Cross from './shape/Cross';
-export Symbols from './shape/Symbols';
+// export Sector from './shape/Sector';
+// export Curve from './shape/Curve';
+// export Rectangle from './shape/Rectangle';
+// export Polygon from './shape/Polygon';
+// export Dot from './shape/Dot';
+// export Cross from './shape/Cross';
+// export Symbols from './shape/Symbols';
 
-export PolarGrid from './polar/PolarGrid';
-export PolarRadiusAxis from './polar/PolarRadiusAxis';
-export PolarAngleAxis from './polar/PolarAngleAxis';
-export Pie from './polar/Pie';
-export Radar from './polar/Radar';
-export RadialBar from './polar/RadialBar';
+// export PolarGrid from './polar/PolarGrid';
+// export PolarRadiusAxis from './polar/PolarRadiusAxis';
+// export PolarAngleAxis from './polar/PolarAngleAxis';
+// export Pie from './polar/Pie';
+// export Radar from './polar/Radar';
+// export RadialBar from './polar/RadialBar';
 
 export Brush from './cartesian/Brush';
 export ReferenceLine from './cartesian/ReferenceLine';
@@ -42,12 +42,13 @@ export ZAxis from './cartesian/ZAxis';
 export ErrorBar from './cartesian/ErrorBar';
 
 export LineChart from './chart/LineChart';
-export BarChart from './chart/BarChart';
-export PieChart from './chart/PieChart';
-export Treemap from './chart/Treemap';
-export Sankey from './chart/Sankey';
-export RadarChart from './chart/RadarChart';
-export ScatterChart from './chart/ScatterChart';
+// export BarChart from './chart/BarChart';
+// export PieChart from './chart/PieChart';
+// export Treemap from './chart/Treemap';
+// export Sankey from './chart/Sankey';
+// export RadarChart from './chart/RadarChart';
+// export ScatterChart from './chart/ScatterChart';
 export AreaChart from './chart/AreaChart';
-export RadialBarChart from './chart/RadialBarChart';
+// export RadialBarChart from './chart/RadialBarChart';
 export ComposedChart from './chart/ComposedChart';
+export { stored } from './util/DataUtils';
