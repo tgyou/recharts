@@ -100,8 +100,7 @@ class Area extends Component {
 
   state = { isAnimationFinished: true };
 
-  // id = uniqueId('recharts-area-');
-  id = 'recharts-area-clipPath-id'
+  id = uniqueId('recharts-area-');
 
   handleAnimationEnd = () => {
     this.setState({ isAnimationFinished: true });
